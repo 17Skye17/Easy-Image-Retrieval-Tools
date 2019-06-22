@@ -35,7 +35,7 @@ example:
 ```shell
 python gen_datalist.py  dataset/paris6k/train train.lst
 ```
-Same to val.lst
+Same to `val.lst`
 
 ### 2. Extract features
 ```shell
@@ -47,16 +47,17 @@ example:
 ```shell
 python extract.py resnet101 train.lst paris-train.hdf5 0 128
 ```
-Same to val.lst
+Same to `val.lst`
 
 ### 3. Evaluate
-Note: you can modify utils/parser.py to fit your need
 
-For paris6k, oxford5k, roxford5k, rparis6k, use `evaluate.py`
+#### For `paris6k, oxford5k, roxford5k, rparis6k`, use `evaluate.py`
+
+Note: you can modify `utils/parser.py` to fit your need
 ```shell
 python evaluate.py --datasets=paris6k --features=paris-val.hdf5
 ```
-For your own dataset,
+#### For your own dataset:
 ```shell
 cd eval/
 
@@ -73,7 +74,7 @@ A file named `paris_rank` is generated, format:
 ```shell
 val_image_id train_image_id1 train_image_id2 ... train_image_idk
 ```
-Use mAP as evaluation metric:
+Use **mAP** as evaluation metric:
 ```shell
 python map.py pred_file
 ```
@@ -83,11 +84,12 @@ example:
 ```shell
 python map.py paris_rank
 ```
-I test this code on ThePerfect500k dataset, please verify the ground truth file in `map.py` which is in format:
+I tested this code on ThePerfect500k dataset, please verify the ground truth file in `map.py` which is a csv file in format:
 
 ```shell
 val_image_id, train_image_id1 ... train_image_idn
 ```
+
 
 Update by Skye
 
