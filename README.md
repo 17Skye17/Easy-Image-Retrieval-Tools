@@ -58,6 +58,9 @@ Note: you can modify `utils/parser.py` to fit your need
 python evaluate.py --datasets=paris6k --features=paris-val.hdf5
 ```
 #### For your own dataset:
+
+##### 1.Calculate distance
+
 ```shell
 cd eval/
 
@@ -74,6 +77,8 @@ A file named `paris_rank` is generated, format:
 ```shell
 val_image_id train_image_id1 train_image_id2 ... train_image_idk
 ```
+##### 2.Caltulate mAP
+
 Use **mAP** as evaluation metric:
 ```shell
 python map.py pred_file
