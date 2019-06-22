@@ -95,6 +95,10 @@ I tested this code on ThePerfect500k dataset, please verify the ground truth fil
 val_image_id, train_image_id1 ... train_image_idn
 ```
 
+### TODO
++ PCA+Whiten for CNN features
++ Feature fusion
+
 
 Update by Skye
 
